@@ -1,11 +1,6 @@
 name: app
 
-type: 'nodejs:18's
-
-mounts:
-  'web/uploads':
-    source: local
-    source_path: uploads
+type: 'nodejs:18'
 
 disk: 2048
 
