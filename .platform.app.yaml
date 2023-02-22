@@ -1,6 +1,10 @@
 name: app
 
-type: 'php:8.2'
+type: 'nodejs:18'
+
+dependencies:
+  nodejs:
+    yarn: "*"
 
 mounts:
   'web/uploads':
@@ -11,13 +15,8 @@ disk: 2048
 
 hooks:
   build: |
-    set -e
-  deploy: |
-    set -e
+    npm run buildc
 
 web:
-  locations:
-    '/':
-      root: "web"
-      passthru: "/index.php"
-      
+  commands:
+    start: node index.js
