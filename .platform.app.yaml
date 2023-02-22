@@ -4,10 +4,6 @@ type: 'nodejs:18'
 
 disk: 2048
 
-hooks:
-  build: |
-    npm run build
-
 web:
   commands:
     start: node index.js
